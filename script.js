@@ -186,7 +186,7 @@ revealSections();
 // Mobile Menu Toggle Functionality
 document.addEventListener("DOMContentLoaded", function () {
     const mobileMenu = document.getElementById("mobile-menu");
-    const navLinks = document.querySelector(".nav-links");
+    const navLinks = document.querySelector(".eco-navbar ul");
 
     if (mobileMenu && navLinks) {
         mobileMenu.addEventListener("click", function () {
