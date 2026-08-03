@@ -496,123 +496,6 @@ footer {
     display: none !important;
 }
 
-/* =========================================
-    MOBILE & TABLET RESPONSIVE DESIGN
-========================================= */
-@media (max-width: 992px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-    .logo {
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px;
-        padding: 0;
-    }
-    header {
-        padding: 110px 25px;
-    }
-    header h1 {
-        font-size: 46px;
-        line-height: 1.25;
-        margin-bottom: 20px;
-    }
-    header p {
-        font-size: 20px;
-        max-width: 650px;
-    }
-    .about, .services, .why, .industries, .frameworks, .process, .cta, .contact {
-        padding: 70px 25px;
-    }
-    .service-container, .industry-container, .framework-container, .process-container, .stats {
-        gap: 25px;
-    }
-    .service-card, .industry-card, .framework-card, .process-card, .stat-box {
-        width: 100%;
-        max-width: 320px;
-    }
-    .contact form {
-        width: 100%;
-        max-width: 650px;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        padding: 15px;
-    }
-    nav ul {
-        gap: 14px;
-    }
-    nav ul li a {
-        font-size: 15px;
-    }
-    header {
-        padding: 80px 20px;
-    }
-    header h1 {
-        font-size: 36px;
-    }
-    header p {
-        font-size: 18px;
-    }
-    
-    .whatsapp-float {
-        width: 58px;
-        height: 58px;
-        bottom: 20px;
-        right: 20px;
-    }
-    #ai-agent-container {
-        bottom: 20px !important;
-        right: 88px !important;
-    }
-    #ai-chat-window {
-        width: 300px !important;
-        height: 400px !important;
-        right: -68px !important;
-    }
-
-    .about, .services, .why, .industries, .frameworks, .process, .cta, .contact {
-        padding: 60px 20px;
-    }
-    .service-card, .industry-card, .framework-card, .process-card, .stat-box {
-        max-width: 100%;
-    }
-    .stat-box {
-        padding: 30px;
-    }
-    .stat-box h2 {
-        font-size: 34px;
-    }
-    .stat-box p {
-        font-size: 16px;
-    }
-    .map-container {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 30px;
-    }
-    header p {
-        font-size: 16px;
-    }
-    nav ul {
-        gap: 10px;
-    }
-    nav ul li a {
-        font-size: 14px;
-    }
-}
 /* --- Logo Text Colors for White Navbar --- */
 .brand-title {
     color: #1b4332;
@@ -624,6 +507,7 @@ footer {
 .logo-main-heading {
     color: #c5a880;
 }
+
 /* --- Complete Premium Eco-Navbar Fix (Clean Logo Only) --- */
 .eco-navbar {
     position: fixed;
@@ -670,14 +554,14 @@ footer {
 
 /* Logo Image Bold Presence Fix */
 .eco-navbar .logo img {
-    height: 75px; /* Logo size is grand and bold */
+    height: 75px; 
     width: auto;
     object-fit: contain;
     mix-blend-mode: multiply;
 }
 
 .eco-navbar .logo img:hover {
-    transform: scale(1.03); /* Subtle premium interaction */
+    transform: scale(1.03); 
 }
 
 /* Center Tagline Text Alignment */
@@ -686,15 +570,12 @@ footer {
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #d4af37; /* Metallic Gold */
+    color: #dfba6b; 
     text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.15);
-    
-    /* KHADI LINE HATANE KE LIYE YE BADLAV KIYA HAI: */
-    border-left: none; /* Khadi line ko poora hata diya */
-    padding-left: 0;   /* Left padding zero ki taaki spacing left se adjust ho jaye */
-    
+    border-left: none; 
+    padding-left: 0;   
     margin-right: auto;
-    margin-left: 45px; /* Logo se halka sa clean gap maintain rakhne ke liye */
+    margin-left: 45px; 
     text-transform: uppercase;
 }
 
@@ -717,22 +598,12 @@ footer {
 }
 
 .eco-navbar ul li a:hover {
-    color: #c5a880;
+    color: #dfba6b;
 }
 
 /* --- Hero Banner Dynamic Padding Adjustment --- */
 header {
-    margin-top: 95px; /* Adjusted to perfectly match navbar height */
-}
-
-/* Responsive Hide for Tagline */
-@media (max-width: 992px) {
-    .nav-tagline {
-        display: none;
-    }
-    .eco-navbar .logo img {
-        height: 60px; /* Scaling down gracefully for mobile */
-    }
+    margin-top: 95px; 
 }
 
 /* ================= SCROLL REVEAL ANIMATIONS ================= */
@@ -748,8 +619,6 @@ header {
 }
 
 /* ================= HOVER & INTERACTIVE ANIMATIONS ================= */
-
-/* Service & Industry Cards Smooth Zoom Effect */
 .service-card, .industry-card, .framework-card, .process-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -759,7 +628,6 @@ header {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Hero and CTA Buttons Pulse / Hover Effect */
 .hero-btn, button[type="submit"] {
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -769,7 +637,6 @@ header {
     box-shadow: 0 6px 20px rgba(11, 110, 79, 0.3);
 }
 
-/* Navbar Link Hover Animation */
 .eco-navbar ul li a {
     position: relative;
     transition: color 0.3s ease;
@@ -790,161 +657,106 @@ header {
     width: 100%;
 }
 
-/* Mobile View Fix for Navigation */
-@media screen and (max-width: 768px) {
-  /* Navigation bar ko mobile ke mutabiq adjust karne ke liye */
-  nav, .navbar, .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    font-size: 14px;
-    padding: 5px;
-  }
-}
+/* =========================================================
+   CLEAN & FINAL MOBILE RESPONSIVE FIX (Laptop Layout Safe)
+   ========================================================= */
 
-/* Mobile Navigation Fix */
-@media screen and (max-width: 768px) {
-  /* Navbar ko column ya wrap mein set karne ke liye */
-  nav, .navbar, .nav-links, header .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0b2b1d; /* Aapke theme ke hisab se background */
-    width: 100%;
-    padding: 10px 0;
-  }
-  
-  nav a, .nav-links a {
-    color: #ffffff !important;
-    padding: 8px 15px;
-    font-size: 16px;
-    text-decoration: none;
-  }
-}
-
-/* Mobile View Fix: Laptop layout bilkul safe rahega, yeh sirf mobile par chalega */
-@media screen and (max-width: 768px) {
-    .eco-navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        height: auto !important;
-    }
-
-    .eco-navbar .logo img {
-        max-height: 50px; /* Mobile par logo ka size adjust karne ke liye */
-    }
-
-    .eco-navbar .nav-tagline {
-        font-size: 10px;
-        text-align: center;
-        margin: 5px 0;
-    }
-
-    .eco-navbar ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        padding: 0;
-        margin: 10px 0 0 0;
-        list-style: none;
-    }
-
-    .eco-navbar ul li a {
-        font-size: 13px;
-        padding: 4px 8px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 4px;
-        color: #fff;
-        text-decoration: none;
-    }
-}
-
-/* ==============================
-   MOBILE RESPONSIVE STYLES (Hamburger Menu)
-   ============================== */
-
-/* Shuru mein mobile toggle chup rahega */
 .menu-toggle {
     display: none;
     cursor: pointer;
     position: absolute;
-    top: 15px; /* Logo ke hisab se adjust karein */
-    right: 15px; /* Screen ke right side mein */
-    z-index: 1000;
+    top: 25px;
+    right: 25px;
+    z-index: 1005;
 }
 
 .menu-toggle .bar {
     display: block;
-    width: 25px;
+    width: 28px;
     height: 3px;
     margin: 5px auto;
-    background-color: #ffffff; /* Icon ka color */
+    background-color: #1b4332;
     transition: all 0.3s ease;
 }
 
-/* Mobile Screen View (Max-width: 768px) - Jab screen choti ho */
-@media screen and (max-width: 768px) {
-    
-    /* 1. Navigation Bar layout ko column mein set karein */
-    .eco-navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: auto !important;
-        padding: 10px 0;
+@media screen and (max-width: 992px) {
+    .nav-tagline {
+        display: none;
     }
-
-    /* Logo ko chhota karein */
     .eco-navbar .logo img {
-        max-height: 45px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .eco-navbar {
+        height: auto !important;
+        padding: 12px 20px !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        background-color: #ffffff !important;
     }
 
-    /* Tagline ko chhota karein */
+    .eco-navbar .logo img {
+        max-height: 45px !important;
+    }
+
     .eco-navbar .nav-tagline {
-        font-size: 9px;
-        margin: 5px 0 15px 0;
+        display: none !important;
     }
 
-    /* 2. Menu Toggle Icon ko dikhayein */
     .menu-toggle {
         display: block;
     }
 
-    /* 3. Navigation Links ko default mein hide karein */
-    .nav-links {
-        display: none; /* Initially chupe rahenge */
+    .eco-navbar ul {
+        display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #0b2b1d; /* Dark Green background taaki text dikhe */
+        background-color: #0b2b1d;
         position: absolute;
-        top: 80px; /* Navbar ke niche */
+        top: 75px;
         left: 0;
         text-align: center;
         padding: 20px 0;
-        box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
-        z-index: 999;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+        z-index: 1004;
+        margin: 0;
     }
 
-    /* Jab menu active ho (click hone par), tab dikhayein */
-    .nav-links.active {
-        display: flex;
+    .eco-navbar ul.active {
+        display: flex !important;
     }
 
-    /* Links ki styling */
-    .nav-links li {
+    .eco-navbar ul li {
         margin: 10px 0;
     }
 
-    .nav-links a {
-        color: #ffffff !important; /* Links ka color white */
-        font-size: 16px;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 5px 20px;
+    .eco-navbar ul li a {
+        color: #ffffff !important;
+        font-size: 16px !important;
+        font-weight: 600;
+        padding: 8px 20px;
         display: block;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .eco-navbar ul li a:hover {
+        color: #dfba6b !important;
+    }
+    
+    header {
+        margin-top: 75px;
+        padding: 80px 20px;
+    }
+    
+    header h1 {
+        font-size: 36px;
+    }
+    
+    header p {
+        font-size: 18px;
     }
 }
