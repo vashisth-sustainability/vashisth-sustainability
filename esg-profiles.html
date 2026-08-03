@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Frameworks & Digital Partner Services - SP Vashisth Sustainability Consulting</title>
+    <style>
+        /* General Reset & Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8fafc;
+            color: #334155;
+        }
+
+        /* Decorative Navbar */
+        header {
+            background: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 20px;
+            color: #0f172a;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #059669; /* Premium ESG Green */
+        }
+
+        /* Hero Section for Profiles */
+        .profiles-hero {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .profiles-hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .profiles-hero p {
+            font-size: 18px;
+            color: #d1fae5;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Grid Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 25px;
+        }
+
+        /* Framework Cards */
+        .framework-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #059669;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .framework-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(5, 150, 105, 0.15);
+        }
+
+        .framework-badge {
+            background: #d1fae5;
+            color: #065f46;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            width: max-content;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .framework-card h3 {
+            font-size: 20px;
+            color: #0f172a;
+            margin: 0 0 12px 0;
+            font-weight: 600;
+        }
+
+        .framework-card p {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Decorative Header -->
+    <header>
+        <a href="index.html" class="logo">SP Vashisth Sustainability Consulting</a>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#industries">Industries</a></li>
+                <li><a href="esg-profiles.html" class="active">ESG Profiles</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="profiles-hero">
+        <h1>ESG Frameworks We Support</h1>
+        <p>Comprehensive advisory and technical reporting aligned with global sustainability standards, regulatory mandates, and impact frameworks.</p>
+    </section>
+
+    <!-- Content Grid for Frameworks -->
+    <div class="container">
+        <div class="grid">
+            
+            <!-- 1. GRI -->
+            <div class="framework-card">
+                <span class="framework-badge">GRI</span>
+                <h3>Global Reporting Initiative</h3>
+                <p>The global common language for impact reporting. It evaluates an organization’s broad material impacts on the <strong>economy, environment, and society</strong>, ensuring complete stakeholder transparency.</p>
+            </div>
+
+            <!-- 2. BRSR -->
+            <div class="framework-card">
+                <span class="framework-badge">SEBI BRSR</span>
+                <h3>Business Responsibility & Sustainability Reporting</h3>
+                <p>Mandatory for top Indian listed entities. Structures disclosures across <strong>9 core ESG principles</strong>, covering comprehensive GHG footprints, workforce welfare, and value chain governance.</p>
+            </div>
+
+            <!-- 3. ISSB -->
+            <div class="framework-card">
+                <span class="framework-badge">ISSB</span>
+                <h3>International Sustainability Standards Board</h3>
+                <p>Establishes a baseline of global disclosure standards (IFRS S1 & S2) focused on delivering <strong>decision-useful, financially material sustainability and climate-related risks</strong> to global investors.</p>
+            </div>
+
+            <!-- 4. CSRD -->
+            <div class="framework-card">
+                <span class="framework-badge">CSRD</span>
+                <h3>Corporate Sustainability Reporting Directive</h3>
+                <p>Rigorous European Union mandate requiring strict compliance under the European Sustainability Reporting Standards (ESRS) applying a <strong>double-materiality perspective</strong>.</p>
+            </div>
+
+            <!-- 5. TCFD -->
+            <div class="framework-card">
+                <span class="framework-badge">TCFD</span>
+                <h3>Task Force on Climate-Related Financial Disclosures</h3>
+                <p>Framework structured around four core elements: <strong>Governance, Strategy, Risk Management, and Metrics & Targets</strong> to quantify financial exposure to physical and transition climate risks.</p>
+            </div>
+
+            <!-- 6. CDP -->
+            <div class="framework-card">
+                <span class="framework-badge">CDP</span>
+                <h3>Carbon Disclosure Project</h3>
+                <p>The gold standard for environmental disclosure. We assist organizations in scoring high on <strong>Climate Change, Water Security, and Forests</strong> questionnaires for global institutional investors.</p>
+            </div>
+
+            <!-- 7. SASB -->
+            <div class="framework-card">
+                <span class="framework-badge">SASB Standards</span>
+                <h3>Sustainability Accounting Standards Board</h3>
+                <p>Industry-specific standards identifying financially material sustainability factors across <strong>77 distinct industries</strong>, connecting operational sustainability directly to enterprise value.</p>
+            </div>
+
+            <!-- 8. UN SDGs -->
+            <div class="framework-card">
+                <span class="framework-badge">UN SDGs</span>
+                <h3>Sustainable Development Goals</h3>
+                <p>Maps corporate sustainability strategies directly onto the United Nations' <strong>17 global goals</strong>, measuring and validating long-term corporate contributions toward global sustainable development.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- High-Impact "Build Your Website" Banner Section -->
+    <section style="background: linear-gradient(135deg, #064e3b 0%, #022c22 50%, #0f172a 100%); color: #ffffff; padding: 90px 20px; text-align: center; margin-top: 60px; border-top: 5px solid #10b981; border-bottom: 5px solid #10b981; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+        <div style="max-width: 900px; margin: 0 auto;">
+            
+            <!-- Eye-Catching Glowing Badge -->
+            <span style="background: #10b981; color: #ffffff; font-size: 13px; font-weight: 700; padding: 8px 20px; border-radius: 30px; text-transform: uppercase; letter-spacing: 1.5px; display: inline-block; margin-bottom: 25px; box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);">
+                🚀 Need a Website for Your Business?
+            </span>
+            
+            <!-- Bold & High-Contrast Headline -->
+            <h2 style="font-size: 38px; font-weight: 800; margin-bottom: 20px; color: #ffffff; line-height: 1.3;">
+                Don't Have a Website Yet? <br><span style="color: #34d399;">Let’s Build Yours & Take Your Business Online!</span>
+            </h2>
+            
+            <!-- Engaging Description -->
+            <p style="font-size: 17px; color: #cbd5e1; line-height: 1.8; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                In today's digital world, if your business isn't online, you're losing clients. Whether you need a corporate portfolio, service landing page, or custom web portal, I build lightning-fast, mobile-friendly websites. <strong>Collaborate with me to launch your brand digitally!</strong>
+            </p>
+
+            <!-- Prominent Action Buttons -->
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 50px;">
+                <a href="index.html#contact" style="background: #10b981; color: #ffffff; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);">
+                    Get Your Website Built Now ⚡
+                </a>
+                
+                <a href="index.html#contact" style="background: rgba(255, 255, 255, 0.1); color: #ffffff; border: 2px solid #34d399; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: 700; transition: all 0.3s ease;">
+                    Discuss Your Project
+                </a>
+            </div>
+
+            <!-- Highlight Cards Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
+                
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 25px; border-radius: 12px; border: 1px solid #334155;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">💻</div>
+                    <h4 style="color: #34d399; margin: 0 0 8px 0; font-size: 17px; font-weight: 700;">Custom Design</h4>
+                    <p style="color: #94a3b8; font-size: 14px; margin: 0; line-height: 1.6;">Tailored strictly to your business needs, clean layouts, and professional branding.</p>
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 25px; border-radius: 12px; border: 1px solid #334155;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">📱</div>
+                    <h4 style="color: #34d399; margin: 0 0 8px 0; font-size: 17px; font-weight: 700;">Mobile Friendly</h4>
+                    <p style="color: #94a3b8; font-size: 14px; margin: 0; line-height: 1.6;">Fully responsive across smartphones, tablets, laptops, and giant screens.</p>
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 25px; border-radius: 12px; border: 1px solid #334155;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">🚀</div>
+                    <h4 style="color: #34d399; margin: 0 0 8px 0; font-size: 17px; font-weight: 700;">Affordable & Fast</h4>
+                    <p style="color: #94a3b8; font-size: 14px; margin: 0; line-height: 1.6;">Quick turnaround time with complete setup and hosting guidance.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

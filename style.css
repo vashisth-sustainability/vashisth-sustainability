@@ -1,0 +1,791 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7f6;
+    color: #333;
+}
+
+/* ================= HEADER ================= */
+header {
+    text-align: center;
+    color: white;
+    padding: 190px 30px;
+    position: relative;
+    overflow: hidden;
+
+    /* Silk Wave Emerald Gradient Effect */
+    background: radial-gradient(circle at 50% -20%, #0d5c43 0%, #04241a 70%),
+                linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.1) 100%);
+    
+    /* Left and Right Luxury Leaves/Floral Overlay Patterns */
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M0,0 C30,40 40,70 10,120 M120,0 C90,40 80,70 110,120' stroke='rgba(223,186,107,0.06)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"), 
+        radial-gradient(circle at 50% 30%, #0c6147 0%, #03241a 80%);
+    
+    background-size: 300px 300px, auto;
+    background-position: left center, center;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.6);
+}
+header h1 {
+    font-family: 'Playfair Display', 'Georgia', serif; /* Elegant Premium Serif Font */
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+header p {
+    font-size: 22px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+}
+
+/* ================= NAV BAR ================= */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Bilkul safed background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Ek premium, halki shadow premium look ke liye */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+.logo img {
+    width: 180px;
+    height: auto;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    align-items: center;
+}
+nav ul li a {
+    color: #1b4332; /* Dark Green text color jo aapki theme se match karega */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #c5a880; /* Hover karne par premium golden color */
+}
+
+/* Specific styling for Contact link if it mimics a button inside the list */
+nav ul li:last-child a {
+    border: 1px solid #dfba6b;
+    padding: 8px 24px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+nav ul li:last-child a:hover {
+    background: #dfba6b;
+    color: #04291e !important;
+}
+
+/* ================= BUTTONS ================= */
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 36px;
+    background: linear-gradient(180deg, #ffffff 0%, #f4e8c1 100%);
+    color: #04241a !important;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid #dfba6b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(223, 186, 107, 0.4);
+    background: linear-gradient(180deg, #f4e8c1 0%, #dfba6b 100%);
+}
+
+/* ================= ABOUT ================= */
+.about {
+    padding: 80px 100px;
+    background: white;
+    text-align: center;
+}
+.about h2 {
+    font-size: 36px;
+    color: #0b6e4f;
+    margin-bottom: 20px;
+}
+.about p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* ================= SERVICES ================= */
+.services {
+    padding: 80px 60px;
+    background: #f5f7f6;
+    text-align: center;
+}
+.services h2 {
+    font-size: 36px;
+    color: #0b6e4f;
+    margin-bottom: 50px;
+}
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.service-card {
+    width: 280px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    border-top: 5px solid #0b6e4f;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+}
+.service-card h3 {
+    color: #0b6e4f;
+    margin-bottom: 10px;
+}
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ================= WHY CHOOSE US ================= */
+.why {
+    padding: 80px;
+    background: white;
+    text-align: center;
+}
+.why h2 {
+    color: #0b6e4f;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.why-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+.why-list li {
+    font-size: 18px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.why-list li span {
+    color: #0b6e4f;
+    font-weight: bold;
+}
+
+/* ================= INDUSTRIES ================= */
+.industries {
+    padding: 80px 30px;
+    background: #f7f9f8;
+    text-align: center;
+}
+.industries h2 {
+    font-size: 38px;
+    color: #0b6e4f;
+    margin-bottom: 50px;
+}
+.industry-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.industry-card {
+    width: 230px;
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    border-top: 5px solid #0b6e4f;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+.industry-card:hover {
+    background: #0b6e4f;
+    color: white;
+    transform: translateY(-8px);
+}
+
+/* ================= FRAMEWORKS ================= */
+.frameworks {
+    padding: 80px 30px;
+    background: white;
+    text-align: center;
+}
+.frameworks h2 {
+    font-size: 38px;
+    color: #0b6e4f;
+    margin-bottom: 50px;
+}
+.framework-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.framework-card {
+    width: 180px;
+    background: #0b6e4f;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    transition: .3s;
+}
+.framework-card:hover {
+    transform: translateY(-8px);
+    background: #08543d;
+}
+
+/* ================= PROCESS ================= */
+.process {
+    padding: 90px 40px;
+    background: #f7f9f8;
+    text-align: center;
+}
+.process h2 {
+    font-size: 38px;
+    color: #0b6e4f;
+    margin-bottom: 50px;
+}
+.process-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.process-card {
+    width: 280px;
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    border-top: 5px solid #0b6e4f;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+.process-card:hover {
+    transform: translateY(-8px);
+}
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #0b6e4f;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.process-card h3 {
+    color: #0b6e4f;
+    margin-bottom: 15px;
+}
+.process-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ================= STATS ================= */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 70px 20px;
+    background: white;
+}
+.stat-box {
+    width: 230px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    border-top: 5px solid #0b6e4f;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    text-align: center;
+    transition: .3s;
+}
+.stat-box:hover {
+    transform: translateY(-10px);
+}
+.stat-box h2 {
+    font-size: 42px;
+    color: #0b6e4f;
+}
+.stat-box p {
+    margin-top: 15px;
+    color: #555;
+    font-size: 18px;
+}
+
+/* ================= CTA ================= */
+.cta {
+    background: #0b6e4f;
+    color: white;
+    text-align: center;
+    padding: 90px 30px;
+}
+.cta h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.cta p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* ================= CONTACT FORM ================= */
+.contact {
+    background: #0b6e4f;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.contact p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.contact form {
+    width: 700px;
+    max-width: 95%;
+    margin: 40px auto 0;
+}
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+.contact textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+.contact button {
+    background: white;
+    color: #0b6e4f;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact button:hover {
+    background: #f2f2f2;
+}
+
+/* ================= MAP CONTAINER ================= */
+.map-container {
+    width: 700px;
+    max-width: 95%;
+    margin: 40px auto 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 35px 25px;
+    font-size: 16px;
+}
+.social-links {
+    margin: 25px 0;
+}
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.social-links a:hover {
+    color: #7ddf9c;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    z-index: 9999;
+    transition: .3s;
+    text-decoration: none;
+}
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    background: #1ebe5d;
+}
+
+/* ================= ANIMATION SCRIPTS ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= AI CHAT WINDOW FIXED STATE ================= */
+#ai-chat-window {
+    display: none !important;
+}
+
+/* =========================================
+    MOBILE & TABLET RESPONSIVE DESIGN
+========================================= */
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .logo {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+        padding: 0;
+    }
+    header {
+        padding: 110px 25px;
+    }
+    header h1 {
+        font-size: 46px;
+        line-height: 1.25;
+        margin-bottom: 20px;
+    }
+    header p {
+        font-size: 20px;
+        max-width: 650px;
+    }
+    .about, .services, .why, .industries, .frameworks, .process, .cta, .contact {
+        padding: 70px 25px;
+    }
+    .service-container, .industry-container, .framework-container, .process-container, .stats {
+        gap: 25px;
+    }
+    .service-card, .industry-card, .framework-card, .process-card, .stat-box {
+        width: 100%;
+        max-width: 320px;
+    }
+    .contact form {
+        width: 100%;
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px;
+    }
+    nav ul {
+        gap: 14px;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
+    header {
+        padding: 80px 20px;
+    }
+    header h1 {
+        font-size: 36px;
+    }
+    header p {
+        font-size: 18px;
+    }
+    
+    .whatsapp-float {
+        width: 58px;
+        height: 58px;
+        bottom: 20px;
+        right: 20px;
+    }
+    #ai-agent-container {
+        bottom: 20px !important;
+        right: 88px !important;
+    }
+    #ai-chat-window {
+        width: 300px !important;
+        height: 400px !important;
+        right: -68px !important;
+    }
+
+    .about, .services, .why, .industries, .frameworks, .process, .cta, .contact {
+        padding: 60px 20px;
+    }
+    .service-card, .industry-card, .framework-card, .process-card, .stat-box {
+        max-width: 100%;
+    }
+    .stat-box {
+        padding: 30px;
+    }
+    .stat-box h2 {
+        font-size: 34px;
+    }
+    .stat-box p {
+        font-size: 16px;
+    }
+    .map-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 30px;
+    }
+    header p {
+        font-size: 16px;
+    }
+    nav ul {
+        gap: 10px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+/* --- Logo Text Colors for White Navbar --- */
+.brand-title {
+    color: #1b4332;
+    font-weight: 700;
+}
+.brand-sub {
+    color: #666666;
+}
+.logo-main-heading {
+    color: #c5a880;
+}
+/* --- Complete Premium Eco-Navbar Fix (Clean Logo Only) --- */
+.eco-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 25px rgba(27, 67, 50, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+/* Background Leaf Pattern Overlay */
+.navbar-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.05;
+    pointer-events: none;
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle at 15% 140%, #1b4332 0%, transparent 20%),
+        radial-gradient(circle at 85% -40%, #2d6a4f 0%, transparent 25%),
+        linear-gradient(60deg, rgba(45, 106, 79, 0.08) 25%, transparent 25%),
+        linear-gradient(-60deg, rgba(45, 106, 79, 0.08) 25%, transparent 25%);
+    background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+}
+
+/* Logo Alignment Structure */
+.eco-navbar .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 5px 0;
+}
+
+/* Logo Image Bold Presence Fix */
+.eco-navbar .logo img {
+    height: 75px; /* Logo size is grand and bold */
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.eco-navbar .logo img:hover {
+    transform: scale(1.03); /* Subtle premium interaction */
+}
+
+/* Center Tagline Text Alignment */
+.nav-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #d4af37; /* Metallic Gold */
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.15);
+    
+    /* KHADI LINE HATANE KE LIYE YE BADLAV KIYA HAI: */
+    border-left: none; /* Khadi line ko poora hata diya */
+    padding-left: 0;   /* Left padding zero ki taaki spacing left se adjust ho jaye */
+    
+    margin-right: auto;
+    margin-left: 45px; /* Logo se halka sa clean gap maintain rakhne ke liye */
+    text-transform: uppercase;
+}
+
+/* Right Navigation Links */
+.eco-navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.eco-navbar ul li a {
+    color: #1b4332;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.eco-navbar ul li a:hover {
+    color: #c5a880;
+}
+
+/* --- Hero Banner Dynamic Padding Adjustment --- */
+header {
+    margin-top: 95px; /* Adjusted to perfectly match navbar height */
+}
+
+/* Responsive Hide for Tagline */
+@media (max-width: 992px) {
+    .nav-tagline {
+        display: none;
+    }
+    .eco-navbar .logo img {
+        height: 60px; /* Scaling down gracefully for mobile */
+    }
+}
+
+/* ================= SCROLL REVEAL ANIMATIONS ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= HOVER & INTERACTIVE ANIMATIONS ================= */
+
+/* Service & Industry Cards Smooth Zoom Effect */
+.service-card, .industry-card, .framework-card, .process-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .industry-card:hover, .framework-card:hover, .process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Hero and CTA Buttons Pulse / Hover Effect */
+.hero-btn, button[type="submit"] {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover, button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(11, 110, 79, 0.3);
+}
+
+/* Navbar Link Hover Animation */
+.eco-navbar ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.eco-navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #0b6e4f;
+    transition: width 0.3s ease;
+}
+
+.eco-navbar ul li a:hover::after {
+    width: 100%;
+}
