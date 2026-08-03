@@ -822,3 +822,43 @@ header {
     text-decoration: none;
   }
 }
+
+/* Mobile View Fix: Laptop layout bilkul safe rahega, yeh sirf mobile par chalega */
+@media screen and (max-width: 768px) {
+    .eco-navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: auto !important;
+    }
+
+    .eco-navbar .logo img {
+        max-height: 50px; /* Mobile par logo ka size adjust karne ke liye */
+    }
+
+    .eco-navbar .nav-tagline {
+        font-size: 10px;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .eco-navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 0;
+        margin: 10px 0 0 0;
+        list-style: none;
+    }
+
+    .eco-navbar ul li a {
+        font-size: 13px;
+        padding: 4px 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
