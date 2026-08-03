@@ -862,3 +862,89 @@ header {
         text-decoration: none;
     }
 }
+
+/* ==============================
+   MOBILE RESPONSIVE STYLES (Hamburger Menu)
+   ============================== */
+
+/* Shuru mein mobile toggle chup rahega */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px; /* Logo ke hisab se adjust karein */
+    right: 15px; /* Screen ke right side mein */
+    z-index: 1000;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #ffffff; /* Icon ka color */
+    transition: all 0.3s ease;
+}
+
+/* Mobile Screen View (Max-width: 768px) - Jab screen choti ho */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Navigation Bar layout ko column mein set karein */
+    .eco-navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto !important;
+        padding: 10px 0;
+    }
+
+    /* Logo ko chhota karein */
+    .eco-navbar .logo img {
+        max-height: 45px;
+    }
+
+    /* Tagline ko chhota karein */
+    .eco-navbar .nav-tagline {
+        font-size: 9px;
+        margin: 5px 0 15px 0;
+    }
+
+    /* 2. Menu Toggle Icon ko dikhayein */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* 3. Navigation Links ko default mein hide karein */
+    .nav-links {
+        display: none; /* Initially chupe rahenge */
+        flex-direction: column;
+        width: 100%;
+        background-color: #0b2b1d; /* Dark Green background taaki text dikhe */
+        position: absolute;
+        top: 80px; /* Navbar ke niche */
+        left: 0;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+        z-index: 999;
+    }
+
+    /* Jab menu active ho (click hone par), tab dikhayein */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Links ki styling */
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        color: #ffffff !important; /* Links ka color white */
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 5px 20px;
+        display: block;
+    }
+}

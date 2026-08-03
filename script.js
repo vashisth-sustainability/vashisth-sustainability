@@ -182,3 +182,15 @@ function revealSections() {
 
 // Page load hote hi ek baar run karne ke liye
 revealSections();
+
+// Mobile Menu Toggle Functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    }
+});
