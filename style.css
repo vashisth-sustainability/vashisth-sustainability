@@ -789,3 +789,16 @@ header {
 .eco-navbar ul li a:hover::after {
     width: 100%;
 }
+
+/* Mobile View Fix for Navigation */
+@media screen and (max-width: 768px) {
+  /* Navigation bar ko mobile ke mutabiq adjust karne ke liye */
+  nav, .navbar, .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    padding: 5px;
+  }
+}
