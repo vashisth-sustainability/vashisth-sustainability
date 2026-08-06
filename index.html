@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SP Vashisth Sustainability Consulting | ESG & Sustainability Advisory</title>
     
-   <!-- Web3Forms + hCaptcha Dual Script -->
-   <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <!-- Explicit hCaptcha Script with Onload Callback -->
+<script src="https://js.hcaptcha.com/1/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script>
+  window.onloadCallback = function() {
+    if (document.getElementById('hcaptcha-container')) {
+      hcaptcha.render('hcaptcha-container', {
+        'sitekey': '50b2fe65-b00b-4b9e-ad62-3ba471098be2'
+      });
+    }
+  };
+</script>
 
     <!-- Google Analytics Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-76ER4EEBVT"></script>
@@ -315,7 +324,7 @@
             <input type="text" name="service" placeholder="Service Required (e.g. ESG Consulting, BRSR, GRI, Carbon Accounting)">
             
            <!-- Web3Forms Free Plan Default hCaptcha Sitekey -->
-<div class="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" style="margin: 20px 0; display: flex; justify-content: center;"></div>
+<div id="hcaptcha-container" style="margin: 20px 0; display: flex; justify-content: center; min-height: 78px;"></div>
 
             <button type="submit">Send Enquiry</button>
          </form>
