@@ -17,13 +17,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ================= 2. CONTACT FORM SUBMISSION (WEB3FORMS) =================
+// ================= 2. CONTACT FORM SUBMISSION (WEB3FORMS + hCaptcha) =================
 const form = document.getElementById('contact-form');
 
 if (form) {
     form.addEventListener('submit', function(e) {
         e.preventDefault(); 
         
+        // hCaptcha Response Token Validation
+        const hcaptchaResponse = form.querySelector('[name="h-captcha-response"]');
+        if (!hcaptchaResponse || !hcaptchaResponse.value) {
+            alert("Please complete the hCaptcha check before submitting.");
+            return;
+        }
+
         const button = form.querySelector('button');
         const originalButtonText = button.innerText;
         button.innerText = "Sending...";
@@ -40,6 +47,9 @@ if (form) {
             if (response.status == 200) {
                 alert("Thank you! Your enquiry has been sent successfully. We will get back to you soon.");
                 form.reset(); 
+                if (window.hcaptcha) {
+                    hcaptcha.reset(); // Captcha reset after success
+                }
             } else {
                 console.log(response);
                 alert(json.message || "Something went wrong. Please try again.");
@@ -55,7 +65,6 @@ if (form) {
         });
     });
 }
-
 // ================= 3. AI AGENT LOGIC (ENGLISH DEFAULT & MULTILINGUAL) =================
 const chatInput = document.getElementById('chat-input');
 const sendChatBtn = document.getElementById('send-chat-btn');
