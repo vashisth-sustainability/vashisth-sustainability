@@ -1,9 +1,25 @@
 const express = require('express');
 const cors = require('cors');
+const rateLimit = require('express-rate-limit');
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+// Secure CORS configuration
+app.use(cors({
+    origin: '*', 
+    methods: ['GET', 'POST']
+}));
+
+// Rate Limiter: 15 minute me ek IP se maximum 100 requests allow hongi
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, 
+    max: 100,
+    message: { error: "Bahut zyada requests aa gayi hain, kripya thodi der baad koshish karein." }
+});
+
+// Apply rate limiter to all API routes
+app.use('/api/', limiter);
 
 // Professional ESG Knowledge Base for local smart responses
 const esgKnowledgeBase = [
@@ -28,7 +44,8 @@ const esgKnowledgeBase = [
 app.post('/api/chat', (req, res) => {
     try {
         const { message } = req.body;
-        const userQuery = message ? message.toLowerCase() : "";
+        // Secure input validation and sanitization
+        const userQuery = typeof message === 'string' ? message.toLowerCase().trim().slice(0, 500) : "";
 
         let matchedReply = "As an ESG and Sustainability professional assistant, I can help you with BRSR compliance frameworks, Scope 1-2-3 carbon emission calculations, GRI standard disclosures, and sustainability strategy. Could you please specify your query regarding these topics?";
 
@@ -53,5 +70,5 @@ app.post('/api/chat', (req, res) => {
     }
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT} (Local ESG Mode Active)`));

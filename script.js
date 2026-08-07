@@ -17,49 +17,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ================= 2. CONTACT FORM SUBMISSION (WEB3FORMS + hCaptcha) =================
+// ================= 2. CONTACT FORM SUBMISSION (WEB3FORMS) =================
 const form = document.getElementById('contact-form');
 
 if (form) {
     form.addEventListener('submit', function(e) {
         e.preventDefault(); 
         
-        // hCaptcha Response Token Validation
-        const hcaptchaResponse = form.querySelector('[name="h-captcha-response"]');
-        if (!hcaptchaResponse || !hcaptchaResponse.value) {
-            alert("Please complete the hCaptcha check before submitting.");
-            return;
-        }
-
-        const button = form.querySelector('button');
+        const button = form.querySelector('button[type="submit"]');
         const originalButtonText = button.innerText;
         button.innerText = "Sending...";
         button.disabled = true; 
 
         const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
         fetch('https://api.web3forms.com/submit', {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
         })
         .then(async (response) => {
-            let json = await response.json();
+            let jsonResponse = await response.json();
             if (response.status == 200) {
                 alert("Thank you! Your enquiry has been sent successfully. We will get back to you soon.");
                 form.reset(); 
-                if (window.hcaptcha) {
-                    hcaptcha.reset(); // Captcha reset after success
-                }
             } else {
                 console.log(response);
-                alert(json.message || "Something went wrong. Please try again.");
+                alert(jsonResponse.message || "Something went wrong. Please try again.");
             }
         })
         .catch(error => {
             console.log(error);
             alert("Network error. Please check your internet connection.");
         })
-        .then(() => {
+        .finally(() => {
             button.innerText = originalButtonText;
             button.disabled = false;
         });
